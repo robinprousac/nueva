@@ -117,17 +117,17 @@
 
     <ImageButton
         android:id="@+id/imageButton7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="220dp"
         android:layout_marginRight="220dp"
-        android:background="#ffffff"
+        android:background="@drawable/sobrita"
         android:scaleType="fitCenter"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lupaalin" />
+        app:srcCompat="@drawable/ic_lupa" />
 
     <ImageButton
         android:id="@+id/imageButton8"
@@ -136,9 +136,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="220dp"
         android:layout_marginRight="220dp"
-        android:background="#ffffff"
+        android:background="@drawable/sobrita"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton7"
-        app:srcCompat="@drawable/lupa2" />
+        app:srcCompat="@drawable/ic_borrar2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

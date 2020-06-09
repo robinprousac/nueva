@@ -47,7 +47,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="100dp"
         android:numColumns="5"
-        android:columnWidth="60dp"
+        android:columnWidth="30dp"
         android:stretchMode="columnWidth"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +113,6 @@
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/useralumn" />
+        app:srcCompat="@drawable/ic_user" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

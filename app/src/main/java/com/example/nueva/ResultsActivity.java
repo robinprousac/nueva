@@ -13,6 +13,7 @@ import com.example.nueva.Interface.RetrofitApi;
 import com.example.nueva.data.Result;
 import com.example.nueva.library.libro;
 import com.example.nueva.library.tipoMaterial;
+import com.example.nueva.singleton.Singlenton_URL;
 import com.example.nueva.ui.login.BooksAdapter;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ResultsActivity extends AppCompatActivity {
 
-    private final String URL = "http://104.197.206.202/";
+    private final String URL = Singlenton_URL.getURL();
     // es la url del servidor
     private RetrofitApi retrofitApi;
     // sirve para las peticiones

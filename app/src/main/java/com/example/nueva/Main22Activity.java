@@ -19,6 +19,7 @@ import com.example.nueva.fragments.PageFragmet3;
 import com.example.nueva.fragments.PageFragmet4;
 import com.example.nueva.model.anuncio;
 import com.example.nueva.notes.CarrerItems;
+import com.example.nueva.singleton.Singlenton_URL;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +47,7 @@ public class Main22Activity extends AppCompatActivity {
 
     private final static int NUM_PAGES = 2;
 
-    private final String URL = "http://34.71.14.86//";
+    private final String URL = Singlenton_URL.getURL();
     private RetrofitApi retrofitApi;
 
     @Override
@@ -242,6 +243,6 @@ public class Main22Activity extends AppCompatActivity {
     }
 
     public void prueba(){
-        
+
     }
 }

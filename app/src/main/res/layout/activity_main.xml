@@ -22,12 +22,12 @@
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="fitCenter"
         android:background="#ffffff"
-        app:srcCompat="@drawable/logotras" />
+        app:srcCompat="@drawable/ic_facultad" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginStart="158dp"
         android:layout_marginLeft="158dp"
         android:layout_marginTop="205dp"
@@ -35,14 +35,14 @@
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#ffffff"
+        android:background="@drawable/sobrita"
         android:layout_gravity="end|bottom"
-        app:srcCompat="@drawable/result" />
+        app:srcCompat="@drawable/ic_notas" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginStart="158dp"
         android:layout_marginLeft="158dp"
         android:layout_marginBottom="81dp"
@@ -50,13 +50,13 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="#ffffff"
-        app:srcCompat="@drawable/groups" />
+        android:background="@drawable/sobrita"
+        app:srcCompat="@drawable/ic_auto" />
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="356dp"
         android:layout_marginEnd="158dp"
         android:layout_marginRight="158dp"
@@ -65,14 +65,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#ffffff"
+        android:background="@drawable/sobrita"
         android:onClick="openSug"
-        app:srcCompat="@drawable/recommendation" />
+        app:srcCompat="@drawable/ic_sugerencia" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="205dp"
         android:layout_marginEnd="158dp"
         android:layout_marginRight="158dp"
@@ -80,13 +80,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="openCheck"
-        android:background="#ffffff"
-        app:srcCompat="@drawable/book" />
+        android:background="@drawable/sobrita"
+        app:srcCompat="@drawable/ic_biblioteca" />
 
     <ImageButton
         android:id="@+id/imageButton6"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="207dp"
         android:layout_marginBottom="58dp"
         android:onClick="sendMessage"
@@ -95,8 +95,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:background="#ffffff"
-        app:srcCompat="@drawable/about" />
+        android:background="@drawable/sobrita"
+        app:srcCompat="@drawable/ic_informacion"  />
 
     <TextView
         android:id="@+id/textView25"
