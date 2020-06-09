@@ -240,4 +240,8 @@ public class Main22Activity extends AppCompatActivity {
         int secondsInMili = seconds * 1000;
         return hoursInMili + minsInMili + secondsInMili;
     }
+
+    public void prueba(){
+        
+    }
 }
