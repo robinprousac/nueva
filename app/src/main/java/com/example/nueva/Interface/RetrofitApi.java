@@ -1,7 +1,9 @@
 package com.example.nueva.Interface;
 
 
+import com.example.nueva.Book;
 import com.example.nueva.library.BookCopy;
+import com.example.nueva.library.Book_description;
 import com.example.nueva.library.libro;
 import com.example.nueva.library.tipoMaterial;
 import com.example.nueva.model.anuncio;
@@ -27,13 +29,13 @@ public interface RetrofitApi {
     @GET("/service/carrers")
     Call<List<CarrerItems>> getCarrers(@Query("carnet") String carnet);
 
-    @GET("/biblioteca/test")
-    Call<List<libro>> getLibros(@Query("query") String query);
+    @GET("/biblioteca/busqueda")
+    Call<List<libro>> getLibros(@Query("query_string") String query);
 
     @GET("/biblioteca/book")
-    Call<List<libro>> getLibro(@Query("id") String query);
+    Call<List<Book_description>> getLibro(@Query("id") String query);
 
-    @GET("/biblioteca/copy")
+    @GET("/biblioteca/info")
     Call<List<BookCopy>> getCopias(@Query("id") String query);
 
     @GET("/service/test")

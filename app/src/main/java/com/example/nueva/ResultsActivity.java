@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ public class ResultsActivity extends AppCompatActivity {
     // sirve para las peticiones
 
     private List<libro> libros;
+    GridView gridView;
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     @Override
@@ -51,9 +53,28 @@ public class ResultsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
+
+        gridView = (GridView)findViewById(R.id.gridview);
+        Toast.makeText(ResultsActivity.this,message,Toast.LENGTH_LONG).show();
+
         setLibros(message);
 
-        //Toast.makeText(ResultsActivity.this,message,Toast.LENGTH_LONG).show();
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                libro libro_select = (libro) libros.get(position);
+                //String mesaage = "holaa";
+                //Toast.makeText(ResultsActivity.this,mesaage+libro_select.getId_titulo(),Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(), Book_genericActivity.class);
+
+                String message = libro_select.getId_titulo();
+                intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -83,7 +104,7 @@ public class ResultsActivity extends AppCompatActivity {
                 //  json_text.setText(contenido);
                 Toast.makeText(ResultsActivity.this,contenido,Toast.LENGTH_LONG).show();
 */
-                GridView gridView = (GridView)findViewById(R.id.gridview);
+
                 BooksAdapter booksAdapter = new BooksAdapter(ResultsActivity.this, libros);
                 gridView.setAdapter(booksAdapter);
 
@@ -102,28 +123,7 @@ public class ResultsActivity extends AppCompatActivity {
     }
 
 
-    private Book[] books = {
-            new Book(R.string.abc_an_amazing_alphabet_book, R.string.dr_seuss, R.drawable.abc,
-                    "http://35.193.119.10/img/no-portada.jpg"),
-            new Book(R.string.are_you_my_mother, R.string.dr_seuss, R.drawable.areyoumymother,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/areyoumymother.jpg"),
-            new Book(R.string.where_is_babys_belly_button, R.string.karen_katz, R.drawable.whereisbabysbellybutton,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/whereisbabysbellybutton.jpg"),
-            new Book(R.string.on_the_night_you_were_born, R.string.nancy_tillman, R.drawable.onthenightyouwereborn,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/onthenightyouwereborn.jpg"),
-            new Book(R.string.hand_hand_fingers_thumb, R.string.dr_seuss, R.drawable.handhandfingersthumb,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/handhandfingersthumb.jpg"),
-            new Book(R.string.the_very_hungry_caterpillar, R.string.eric_carle, R.drawable.theveryhungrycaterpillar,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/theveryhungrycaterpillar.jpg"),
-            new Book(R.string.the_going_to_bed_book, R.string.sandra_boynton, R.drawable.thegoingtobedbook,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/thegoingtobedbook.jpg"),
-            new Book(R.string.oh_baby_go_baby, R.string.dr_seuss, R.drawable.ohbabygobaby,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/ohbabygobaby.jpg"),
-            new Book(R.string.the_tooth_book, R.string.dr_seuss, R.drawable.thetoothbook,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/thetoothbook.jpg"),
-            new Book(R.string.one_fish_two_fish_red_fish_blue_fish, R.string.dr_seuss, R.drawable.onefish,
-                    "http://www.raywenderlich.com/wp-content/uploads/2016/03/onefish.jpg")
-    };
+ /*
 
     public void openBook(View view) {
         // Do something in response to button
@@ -133,5 +133,8 @@ public class ResultsActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
+    */
+
 }
 

@@ -8,11 +8,11 @@ import androidx.annotation.NonNull;
 
 public class tipoMaterial {
     int idtipo_material;
-    String descripcion;
+    String nombre;
 
-    public tipoMaterial(int idtipo_material, String descripcion) {
+    public tipoMaterial(int idtipo_material, String nombre) {
         this.idtipo_material = idtipo_material;
-        this.descripcion = descripcion;
+        this.nombre = nombre;
     }
 
     public int getIdtipo_material() {
@@ -20,12 +20,12 @@ public class tipoMaterial {
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return nombre;
     }
 
     @NonNull
     @Override
     public String toString() {
-        return descripcion;
+        return nombre;
     }
 }

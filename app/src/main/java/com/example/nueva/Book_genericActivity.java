@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.nueva.Interface.RetrofitApi;
 import com.example.nueva.library.BookCopy;
 import com.example.nueva.library.BookCopyAdapter;
+import com.example.nueva.library.Book_description;
 import com.example.nueva.library.libro;
 import com.example.nueva.singleton.Singlenton_URL;
 import com.example.nueva.ui.login.BooksAdapter;
@@ -32,7 +33,7 @@ public class Book_genericActivity extends AppCompatActivity {
     private RetrofitApi retrofitApi;
     // sirve para las peticiones
 
-    private List<libro> libros;
+    private List<Book_description> campos;
     private List<BookCopy> copias;
 
     @Override
@@ -60,10 +61,10 @@ public class Book_genericActivity extends AppCompatActivity {
     }
 
     private void setlibro(String query){
-        Call<List<libro>> call = retrofitApi.getLibro(query);//200613637  200719847
-        call.enqueue(new Callback<List<libro>>() {
+        Call<List<Book_description>> call = retrofitApi.getLibro(query);//200613637  200719847
+        call.enqueue(new Callback<List<Book_description>>() {
             @Override
-            public void onResponse(Call<List<libro>> call, Response<List<libro>> response) {
+            public void onResponse(Call<List<Book_description>> call, Response<List<Book_description>> response) {
 
                 if(!response.isSuccessful()){
                     Toast.makeText(Book_genericActivity.this, "respuesta codigo"+response.code(), Toast.LENGTH_LONG).show();
@@ -71,19 +72,19 @@ public class Book_genericActivity extends AppCompatActivity {
 
 
 
-                libros = response.body();
+                campos = response.body();
 
 
                 String contenido = "";
-                for(libro n: libros){
-                    contenido += "titulo: " + n.getTitulo() + "\n";
-                    contenido += "isbn: " +n.getIdlibro() + "\n";
-                    contenido += "descripcion: "+n.getDescripcion() + "\n";
-                    contenido += "autor: "+n.getAutor() + "\n";
+                for(Book_description n: campos){
+                    contenido += "descripcion: " + n.getDescripcion_campo() + "\n";
+                    contenido += "valor: " +n.getValor() + "\n";
+                   // contenido += "descripcion: "+n.getEditorial() + "\n";
+                    //contenido += "autor: "+n.getClasificacion()+ "\n";
                 }
 
                 //  json_text.setText(contenido);
-                Toast.makeText(Book_genericActivity.this,contenido,Toast.LENGTH_LONG).show();
+                //Toast.makeText(Book_genericActivity.this,contenido,Toast.LENGTH_LONG).show();
 
                 // globally
                 TextView myAwesomeTextView = (TextView)findViewById(R.id.textView10);
@@ -99,7 +100,7 @@ public class Book_genericActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<libro>> call, Throwable t) {
+            public void onFailure(Call<List<Book_description>> call, Throwable t) {
                 Toast.makeText(Book_genericActivity.this,"error culey"+t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
@@ -110,8 +111,8 @@ public class Book_genericActivity extends AppCompatActivity {
     }
 
 
-    private void setcopy(String message){
-        Call<List<BookCopy>> call = retrofitApi.getCopias(message);//200613637  200719847
+    private void setcopy(String query){
+        Call<List<BookCopy>> call = retrofitApi.getCopias(query);//200613637  200719847
         call.enqueue(new Callback<List<BookCopy>>() {
             @Override
             public void onResponse(Call<List<BookCopy>> call, Response<List<BookCopy>> response) {

@@ -1,22 +1,67 @@
 package com.example.nueva.library;
 
 public class BookCopy {
-    String libro_idlibro;
-    String clasificacion;
+    String ubicacion;
+    String cod_barras;
+    String inventario;
+    String copia;
+    String estado;
+    String hiperlink;
+    String volumen;
 
-    public String getLibro_idlibro() {
-        return libro_idlibro;
+    public String getUbicacion() {
+        return ubicacion;
     }
 
-    public void setLibro_idlibro(String libro_idlibro) {
-        this.libro_idlibro = libro_idlibro;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
-    public String getClasificacion() {
-        return clasificacion;
+    public String getCod_barras() {
+        return cod_barras;
     }
 
-    public void setClasificacion(String clasificacion) {
-        this.clasificacion = clasificacion;
+    public void setCod_barras(String cod_barras) {
+        this.cod_barras = cod_barras;
+    }
+
+    public String getInventario() {
+        return inventario;
+    }
+
+    public void setInventario(String inventario) {
+        this.inventario = inventario;
+    }
+
+    public String getCopia() {
+        return copia;
+    }
+
+    public void setCopia(String copia) {
+        this.copia = copia;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getHiperlink() {
+        return hiperlink;
+    }
+
+    public void setHiperlink(String hiperlink) {
+        this.hiperlink = hiperlink;
+    }
+
+    public String getVolumen() {
+        return volumen;
+    }
+
+    public void setVolumen(String volumen) {
+        this.volumen = volumen;
     }
 }

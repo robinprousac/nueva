@@ -2,18 +2,30 @@ package com.example.nueva.library;
 
 public class libro {
 
-    String idlibro;
+    String id_titulo;
+    String cover_url;
     String titulo;
-    String autor;
-    String descripcion;
-    String ruta;
+    String clasificacion;
+    String ciudad;
+    String editorial;
+    String anio;
+    String ubicacion;
+    String biblioteca;
 
-    public String getIdlibro() {
-        return idlibro;
+    public String getId_titulo() {
+        return id_titulo;
     }
 
-    public void setIdlibro(String idlibro) {
-        this.idlibro = idlibro;
+    public void setId_titulo(String id_titulo) {
+        this.id_titulo = id_titulo;
+    }
+
+    public String getCover_url() {
+        return cover_url;
+    }
+
+    public void setCover_url(String cover_url) {
+        this.cover_url = cover_url;
     }
 
     public String getTitulo() {
@@ -24,29 +36,51 @@ public class libro {
         this.titulo = titulo;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getClasificacion() {
+        return clasificacion;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setClasificacion(String clasificacion) {
+        this.clasificacion = clasificacion;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public String getRuta() {
-        return ruta;
+    public String getEditorial() {
+        return editorial;
     }
 
-    public void setRuta(String ruta) {
-        this.ruta = ruta;
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
     }
 
+    public String getAnio() {
+        return anio;
+    }
 
+    public void setAnio(String anio) {
+        this.anio = anio;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public String getBiblioteca() {
+        return biblioteca;
+    }
+
+    public void setBiblioteca(String biblioteca) {
+        this.biblioteca = biblioteca;
+    }
 }

@@ -64,8 +64,8 @@ public class BooksAdapter extends BaseAdapter {
 
         // 4
       //  imageView.setImageResource(book.getImageResource());
-        nameTextView.setText(book.getTitulo());
-        authorTextView.setText(book.getIdlibro());
+        nameTextView.setText(book.getId_titulo());
+        authorTextView.setText(book.getTitulo());
 
         return convertView;
     }
