@@ -246,3 +246,15 @@ public class Main22Activity extends AppCompatActivity {
 
     }
 }
+
+
+//https://stackoverflow.com/questions/18953499/youtube-api-to-fetch-all-videos-on-a-channel
+//https://stackoverflow.com/questions/6507482/how-to-show-image-and-video-as-thumbnail-in-grid-view
+//https://stackoverflow.com/questions/25868242/how-to-load-both-images-and-videos-as-gridview-in-android
+
+
+  //  YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
+// getLifecycle().addObserver(youTubePlayerView);
+
+
+//B9f9uQ0OMw0;
