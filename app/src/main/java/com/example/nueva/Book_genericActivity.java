@@ -18,6 +18,7 @@ import com.example.nueva.singleton.Singlenton_URL;
 import com.example.nueva.ui.login.BooksAdapter;
 import com.example.nueva.ui.login.LoginActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -76,25 +77,35 @@ public class Book_genericActivity extends AppCompatActivity {
 
 
                 String contenido = "";
-                for(Book_description n: campos){
-                    contenido += "descripcion: " + n.getDescripcion_campo() + "\n";
-                    contenido += "valor: " +n.getValor() + "\n";
-                   // contenido += "descripcion: "+n.getEditorial() + "\n";
-                    //contenido += "autor: "+n.getClasificacion()+ "\n";
+
+                String tituloAnterior = "";
+                String valor = "";
+                List<String> values=new ArrayList<>();
+
+                for(int a = 0; a<campos.size();a++){
+
+                    if(!campos.get(a).getDescripcion_campo().equalsIgnoreCase("Dewey")){
+                        if(campos.get(a).getDescripcion_campo().equalsIgnoreCase(tituloAnterior) ){
+                            valor+= " "+campos.get(a).getValor();
+                        }else{
+                            if(a!=0){
+                                values.add(tituloAnterior);
+                                values.add(valor);
+                            }
+                            tituloAnterior = campos.get(a).getDescripcion_campo();
+                            valor = campos.get(a).getValor();
+                        }
+                    }
+
                 }
 
-                //  json_text.setText(contenido);
-                //Toast.makeText(Book_genericActivity.this,contenido,Toast.LENGTH_LONG).show();
 
-                // globally
-                TextView myAwesomeTextView = (TextView)findViewById(R.id.textView10);
 
-//in your OnCreate() method
-                myAwesomeTextView.setText(contenido);
+                GridView myGrid=(GridView)findViewById(R.id.grid_descripcionlibro);
+                GridViewAdapter adapt = new GridViewAdapter(values,Book_genericActivity.this);
+                myGrid.setAdapter(adapt);
 
-              //  GridView gridView = (GridView)findViewById(R.id.gridview);
-                //BooksAdapter booksAdapter = new BooksAdapter(Book_genericActivity.this, libros);
-               // gridView.setAdapter(booksAdapter);
+
 
 
             }

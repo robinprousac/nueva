@@ -7,6 +7,24 @@
     tools:context=".Book_genericActivity">
 
 
+    <GridView
+        android:id="@+id/grid_descripcionlibro"
+        android:layout_width="450dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="75dp"
+        android:columnWidth="30dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -19,47 +37,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="85dp"
-        android:layout_height="103dp"
-
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="464dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abc" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="279dp"
-        android:layout_height="380dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:text="Titulo: Abc \n Autor: Autor1 \n Imp: Mexico 809 \n
-        Clasificación: 343 T4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/floatingActionButton5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="272dp"
-        android:layout_marginRight="272dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="600dp"
+        android:layout_marginRight="600dp"
         android:text="UBICACIÓN DE COPIAS"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton4"
@@ -87,22 +77,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_media_previous" />
 
-
     <GridView
         android:id="@+id/gridview"
-        android:layout_width="343dp"
-        android:layout_height="292dp"
-        android:layout_marginStart="500dp"
-        android:layout_marginLeft="500dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="150dp"
-        android:columnWidth="100dp"
-        android:gravity="center"
-        android:horizontalSpacing="50dp"
-        android:numColumns="4"
-        android:stretchMode="spacingWidthUniform"
-        android:verticalSpacing="24dp"
+        android:layout_width="550dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:columnWidth="380dp"
+        android:gravity="left"
+        android:horizontalSpacing="2dp"
+        android:numColumns="1"
+        android:stretchMode="none"
+        android:verticalSpacing="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.296" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="218dp"
+        android:layout_height="259dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton5"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/sinportada" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,13 +51,22 @@ public class BookCopyAdapter extends BaseAdapter {
         // 3
         // final ImageView imageView = (ImageView)convertView.findViewById(R.id.imageview_cover_art);
         final TextView nameTextView = (TextView)convertView.findViewById(R.id.textview_book_name);
-        final TextView authorTextView = (TextView)convertView.findViewById(R.id.textview_book_another);
+        //final TextView authorTextView = (TextView)convertView.findViewById(R.id.textview_book_another);
         // final ImageView imageViewFavorite = (ImageView)convertView.findViewById(R.id.imageview_favorite);
 
         // 4
         //  imageView.setImageResource(book.getImageResource());
-        nameTextView.setText(book.getInventario());
-        authorTextView.setText(book.getCod_barras());
+
+        String []disponible = (book.getEstado()).split("=");
+
+        if( book.inventario != null){
+            nameTextView.setText(book.getUbicacion()+" "+book.getCod_barras()+" "+book.inventario+" "+book.copia+" "+disponible[1]);
+        }else{
+            nameTextView.setText(book.getUbicacion()+" "+book.getCod_barras()+" "+book.copia+" "+disponible[1]);
+        }
+
+
+        //authorTextView.setText(book.getCod_barras());
 
         return convertView;
     }
