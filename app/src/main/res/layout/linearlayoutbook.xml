@@ -1,48 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="250dp"
+    android:baselineAligned="false"
     android:gravity="center">
 
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imageview_cover_art"
-            android:layout_width="wrap_content"
-            android:layout_height="95dp"
-            android:scaleType="centerCrop"/>
-
-
-
-    </FrameLayout>
-
     <TextView
         android:id="@+id/textview_book_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="520dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
         android:textSize="12sp"
-        tools:text="Are You My Mother"
         android:textStyle="bold"
-        android:paddingTop="4dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:gravity="center_horizontal"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Are You My Mother" />
 
     <TextView
         android:id="@+id/textview_book_author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="520dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:gravity="left"
         android:textSize="12sp"
-        tools:text="Dr. Seuss"
-        android:gravity="center_horizontal"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_book_name"
+        tools:text="--" />
+
+    <TextView
+        android:id="@+id/textview_book_clasification"
+        android:layout_width="520dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="28dp"
+        android:gravity="left"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_book_name"
+        tools:text="--" />
+
+    <TextView
+        android:id="@+id/textview_book_library"
+        android:layout_width="520dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="44dp"
+        android:gravity="left"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_book_name"
+        tools:text="--" />
+
+    <TextView
+        android:id="@+id/textview_book_ciudad"
+        android:layout_width="520dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="12dp"
+        android:gravity="left"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_book_name"
+        tools:text="--" />
+
+    <TextView
+        android:id="@+id/textview_book_ubication"
+        android:layout_width="520dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="56dp"
+        android:gravity="left"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_book_name"
+        tools:text="--" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="86dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sinportada" />
 
 
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

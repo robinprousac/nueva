@@ -60,12 +60,34 @@ public class BooksAdapter extends BaseAdapter {
        // final ImageView imageView = (ImageView)convertView.findViewById(R.id.imageview_cover_art);
         final TextView nameTextView = (TextView)convertView.findViewById(R.id.textview_book_name);
         final TextView authorTextView = (TextView)convertView.findViewById(R.id.textview_book_author);
+        final TextView ciudadTextView = (TextView)convertView.findViewById(R.id.textview_book_ciudad);
+        final TextView clasificationTextView = (TextView)convertView.findViewById(R.id.textview_book_clasification);
+        final TextView bibliotecaTextView = (TextView)convertView.findViewById(R.id.textview_book_library);
+        final TextView seccionTextView = (TextView)convertView.findViewById(R.id.textview_book_ubication);
+
        // final ImageView imageViewFavorite = (ImageView)convertView.findViewById(R.id.imageview_favorite);
 
         // 4
       //  imageView.setImageResource(book.getImageResource());
-        nameTextView.setText(book.getId_titulo());
-        authorTextView.setText(book.getTitulo());
+
+        nameTextView.setText((position+1)+". "+book.getTitulo());
+
+       /* if(book.getAutor!=null){
+            //authorTextView.setText(book.getAutor);//autor
+        }else{*/
+            authorTextView.setText("(Sin Autor Registrado)");
+        //}
+
+
+        if(book.getCiudad()!=null){
+            ciudadTextView.setText(book.getCiudad()+book.getEditorial()+book.getAnio());
+        }else{
+            ciudadTextView.setText("--");
+        }
+        clasificationTextView.setText(book.getClasificacion());
+        bibliotecaTextView.setText(book.getBiblioteca());
+        seccionTextView.setText(book.getUbicacion());
+       // authorTextView.setText(book.getTitulo());
 
         return convertView;
     }

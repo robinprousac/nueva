@@ -144,6 +144,7 @@ public class Book_genericActivity extends AppCompatActivity {
                  gridView.setAdapter(booksAdapter);
 
 
+
             }
 
             @Override
