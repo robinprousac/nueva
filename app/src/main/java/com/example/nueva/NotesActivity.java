@@ -2,6 +2,7 @@ package com.example.nueva;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,12 +10,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nueva.Interface.RetrofitApi;
 import com.example.nueva.notes.CarrerItems;
 import com.example.nueva.notes.ItemNote;
 import com.example.nueva.singleton.Singlenton_URL;
+import com.example.nueva.singleton.Singleton_login;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +44,16 @@ public class NotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
 
+
+        Intent intent = getIntent();
+       // String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+
+
+        Toast.makeText(getApplicationContext(), Singleton_login.getInstance().usuario_logeado.getNombre(), Toast.LENGTH_LONG).show();
+
        // prueballenartabla();
+        TextView alumno = (TextView) findViewById(R.id.textView3);
+        alumno.setText("Alumno: \\"+Singleton_login.getInstance().usuario_logeado.getNombre());
 
         Retrofit retro = new Retrofit.Builder()
                 .baseUrl(URL)
@@ -76,7 +88,7 @@ public class NotesActivity extends AppCompatActivity {
 
 
     private void getCarrers(){
-        Call<List<CarrerItems>> call = retrofitApi.getCarrers("200613637");//200613637  200719847
+        Call<List<CarrerItems>> call = retrofitApi.getCarrers(Singleton_login.getInstance().usuario_logeado.getCarnet());//200613637  200719847
         call.enqueue(new Callback<List<CarrerItems>>() {
             @Override
             public void onResponse(Call<List<CarrerItems>> call, Response<List<CarrerItems>> response) {

@@ -15,6 +15,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.nueva.fragments.PageFragmet1;
 import com.example.nueva.fragments.PageFragmet2;
 import com.example.nueva.ui.login.LoginActivity;
+import com.example.nueva.ui.login.user_login;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     private ViewPager viewPager;
     private PagerAdapter adapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

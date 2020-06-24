@@ -9,6 +9,7 @@ import com.example.nueva.library.tipoMaterial;
 import com.example.nueva.model.anuncio;
 import com.example.nueva.notes.CarrerItems;
 import com.example.nueva.notes.ItemNote;
+import com.example.nueva.ui.login.user_login;
 
 import java.util.List;
 
@@ -41,7 +42,11 @@ public interface RetrofitApi {
     @GET("/service/test")
     Call<List<ItemNote>> getNotes(@Query("id_estudiante_carrera") int est_carr);
 
+    @GET("/service/login")
+    Call<List<user_login>> getLogin(@Query("carnet") String carnet, @Query("password") String password);
 
-  //  @GET("/service/carrers")
+
+
+    //  @GET("/service/carrers")
   //  public void getCarrers(Callback<List<CarrerItems>> response);
 }

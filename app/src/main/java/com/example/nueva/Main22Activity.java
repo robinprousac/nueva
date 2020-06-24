@@ -42,7 +42,7 @@ public class Main22Activity extends AppCompatActivity {
     LinearLayoutManager linearLayoutManager;
 
 
-    int time = 1;
+    int time = 12000;
     int count = 0;
 
     private final static int NUM_PAGES = 2;
@@ -156,10 +156,9 @@ public class Main22Activity extends AppCompatActivity {
 
                     linearLayoutManager.smoothScrollToPosition(recyclerView, new RecyclerView.State(), 0);
                 }
-
+/*
                 if(count == myAdapter.getItemCount()) { count = 0; }
-
-                tiempo_mili = toMins(myAdapter.getItemTime(count ));
+                 tiempo_mili = toMins(myAdapter.getItemTime(count ));
 
                 //System.out.println(tiempo_mili);
 
@@ -169,7 +168,7 @@ public class Main22Activity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
+*/
             /*
                 if(count==1){
                     try {

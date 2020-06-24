@@ -73,14 +73,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyviewHolder> {
 
             //getLifecycle().addObserver(holder.youTubePlayerView );
 
-/*
+
             holder.youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                 @Override
                 public void onReady(@NonNull YouTubePlayer youTubePlayer) {
                     String videoId = aux.getNombre();
                     youTubePlayer.loadVideo(videoId, 0);
                 }
-            });*/
+            });
         }else{
             Picasso.get().load(data.get(position).getUrl()).into(holder.imageView);
         }
