@@ -53,7 +53,7 @@ public class NotesActivity extends AppCompatActivity {
 
        // prueballenartabla();
         TextView alumno = (TextView) findViewById(R.id.textView3);
-        alumno.setText("Alumno: \\"+Singleton_login.getInstance().usuario_logeado.getNombre());
+        alumno.setText(Singleton_login.getInstance().usuario_logeado.getNombre());
 
         Retrofit retro = new Retrofit.Builder()
                 .baseUrl(URL)
@@ -111,7 +111,7 @@ public class NotesActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<CarrerItems>> call, Throwable t) {
-                Toast.makeText(NotesActivity.this,"error culey"+t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(NotesActivity.this,t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -152,8 +152,8 @@ public class NotesActivity extends AppCompatActivity {
 
 
                 List<String> values=new ArrayList<>();
-                values.add("No.");values.add("Codigo");values.add("Curso");values.add("Nota");values.add("Fecha");
-                values.add(" ");values.add(" ");values.add(" ");values.add(" ");values.add(" ");
+                values.add("No.");values.add("Codigo");values.add("Curso");values.add("     ");values.add("Nota");values.add("Fecha");
+
 
                 int count = 0;
 
@@ -167,8 +167,12 @@ public class NotesActivity extends AppCompatActivity {
                     values.add(Integer.toString(count));
                     values.add(n.getCod_curso());
                     values.add(n.getCurso());
+
+                    values.add("     ");
                     values.add(n.getNota_final());
-                    values.add(n.getFecha_aprobacion());
+                    String str = n.getFecha_aprobacion();
+                    String[] fechaSplit = str.split("00:");
+                    values.add(fechaSplit[0]);
                 }
 
                 GridView myGrid=(GridView)findViewById(R.id.gridmachos);
@@ -182,7 +186,7 @@ public class NotesActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<ItemNote>> call, Throwable t) {
-                Toast.makeText(NotesActivity.this,"error culey"+t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(NotesActivity.this,t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
