@@ -152,7 +152,9 @@ public class NotesActivity extends AppCompatActivity {
 
 
                 List<String> values=new ArrayList<>();
-                values.add("No.");values.add("Codigo");values.add("Curso");values.add("     ");values.add("Nota");values.add("Fecha");
+                values.add("No.");values.add("CÓDIGO");values.add("CURSO");
+                //values.add(" ");
+                values.add("NOTA");values.add("FECHA");
 
 
                 int count = 0;
@@ -168,7 +170,7 @@ public class NotesActivity extends AppCompatActivity {
                     values.add(n.getCod_curso());
                     values.add(n.getCurso());
 
-                    values.add("     ");
+                   // values.add(" ");
                     values.add(n.getNota_final());
                     String str = n.getFecha_aprobacion();
                     String[] fechaSplit = str.split("00:");

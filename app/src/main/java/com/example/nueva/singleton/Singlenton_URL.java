@@ -10,7 +10,8 @@ public class Singlenton_URL {
     }
 
     public synchronized static String getURL(){
-        URL = "http://35.192.190.218/";
+        //URL = "http://35.192.190.218/";
+        URL = "http://35.238.101.67/";
         return URL;
     }
 }
