@@ -26,10 +26,18 @@
         android:id="@+id/btn_reservar"
         android:layout_width="96dp"
         android:layout_height="36dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="Reservar"
         app:layout_constraintStart_toEndOf="@+id/textview_book_name"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="499dp"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_book_name"
+        app:srcCompat="@android:color/darker_gray" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

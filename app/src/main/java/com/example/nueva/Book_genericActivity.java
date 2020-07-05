@@ -99,10 +99,8 @@ public class Book_genericActivity extends AppCompatActivity {
 
                 }
 
-
-
                 GridView myGrid=(GridView)findViewById(R.id.grid_descripcionlibro);
-                GridViewAdapter adapt = new GridViewAdapter(values,Book_genericActivity.this);
+                GridViewAdapter_DescripcionLibro adapt = new GridViewAdapter_DescripcionLibro(values,Book_genericActivity.this);
                 myGrid.setAdapter(adapt);
 
 
@@ -112,7 +110,7 @@ public class Book_genericActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Book_description>> call, Throwable t) {
-                Toast.makeText(Book_genericActivity.this,"error culey"+t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(Book_genericActivity.this,t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
 

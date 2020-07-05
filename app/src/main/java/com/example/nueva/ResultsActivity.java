@@ -15,6 +15,7 @@ import com.example.nueva.data.Result;
 import com.example.nueva.library.libro;
 import com.example.nueva.library.tipoMaterial;
 import com.example.nueva.singleton.Singlenton_URL;
+import com.example.nueva.singleton.Singleton_idLibro;
 import com.example.nueva.ui.login.BooksAdapter;
 
 import java.util.ArrayList;
@@ -69,6 +70,8 @@ public class ResultsActivity extends AppCompatActivity {
                 //Toast.makeText(ResultsActivity.this,mesaage+libro_select.getId_titulo(),Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(getApplicationContext(), Book_genericActivity.class);
+
+                Singleton_idLibro.getInstance().
 
                 String message = libro_select.getId_titulo();
                 intent.putExtra(EXTRA_MESSAGE, message);
