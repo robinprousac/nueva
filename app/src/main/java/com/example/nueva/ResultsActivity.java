@@ -71,7 +71,7 @@ public class ResultsActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), Book_genericActivity.class);
 
-                Singleton_idLibro.getInstance().
+                Singleton_idLibro.getInstance().id_book = position;
 
                 String message = libro_select.getId_titulo();
                 intent.putExtra(EXTRA_MESSAGE, message);
@@ -83,7 +83,7 @@ public class ResultsActivity extends AppCompatActivity {
     }
 
     private void setLibros(String query){
-        Call<List<libro>> call = retrofitApi.getLibros(query);//200613637  200719847
+        Call<List<libro>> call = retrofitApi.getLibros(query, Singlenton_URL.getAppid(), Singlenton_URL.getPass());
         call.enqueue(new Callback<List<libro>>() {
             @Override
             public void onResponse(Call<List<libro>> call, Response<List<libro>> response) {

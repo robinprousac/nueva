@@ -1,6 +1,7 @@
 package com.example.nueva;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSnapHelper;
@@ -11,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -42,7 +44,7 @@ public class Main22Activity extends AppCompatActivity {
     LinearLayoutManager linearLayoutManager;
 
 
-    int time = 12000;
+    int time = 1;
     int count = 0;
 
     private final static int NUM_PAGES = 2;
@@ -54,6 +56,8 @@ public class Main22Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main22);
+
+        getSupportActionBar().hide();
 /*
         List<Fragment> list = new ArrayList<>();
         list.add(new PageFragmet3());
@@ -74,10 +78,25 @@ public class Main22Activity extends AppCompatActivity {
         //viewPager = findViewById(R.id.pager);
 
         getAnuncios();
-     //   getCarrers();
+        //   getCarrers();
 
         PagerSnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(recyclerView);
+
+
+
+        recyclerView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Intent intent = new Intent(Main22Activity.this, MainActivity.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+
+
+
+
 
 
     }
@@ -156,7 +175,7 @@ public class Main22Activity extends AppCompatActivity {
 
                     linearLayoutManager.smoothScrollToPosition(recyclerView, new RecyclerView.State(), 0);
                 }
-/*
+
                 if(count == myAdapter.getItemCount()) { count = 0; }
                  tiempo_mili = toMins(myAdapter.getItemTime(count ));
 
@@ -168,7 +187,7 @@ public class Main22Activity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-*/
+
             /*
                 if(count==1){
                     try {

@@ -15,6 +15,7 @@ import com.example.nueva.library.BookCopyAdapter;
 import com.example.nueva.library.Book_description;
 import com.example.nueva.library.libro;
 import com.example.nueva.singleton.Singlenton_URL;
+import com.example.nueva.singleton.Singleton_idLibro;
 import com.example.nueva.ui.login.BooksAdapter;
 import com.example.nueva.ui.login.LoginActivity;
 
@@ -54,6 +55,10 @@ public class Book_genericActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
+
+        TextView myAwesomeTextView = (TextView)findViewById(R.id.numero_registro);
+        myAwesomeTextView.setText("Registro No. "+ ( Singleton_idLibro.getInstance().id_book+1));
+
         setlibro(message);
         setcopy(message);
 
@@ -62,7 +67,7 @@ public class Book_genericActivity extends AppCompatActivity {
     }
 
     private void setlibro(String query){
-        Call<List<Book_description>> call = retrofitApi.getLibro(query);//200613637  200719847
+        Call<List<Book_description>> call = retrofitApi.getLibro(query, Singlenton_URL.getAppid(), Singlenton_URL.getPass());
         call.enqueue(new Callback<List<Book_description>>() {
             @Override
             public void onResponse(Call<List<Book_description>> call, Response<List<Book_description>> response) {
@@ -121,7 +126,7 @@ public class Book_genericActivity extends AppCompatActivity {
 
 
     private void setcopy(String query){
-        Call<List<BookCopy>> call = retrofitApi.getCopias(query);//200613637  200719847
+        Call<List<BookCopy>> call = retrofitApi.getCopias(query, Singlenton_URL.getAppid(), Singlenton_URL.getPass());//200613637  200719847
         call.enqueue(new Callback<List<BookCopy>>() {
             @Override
             public void onResponse(Call<List<BookCopy>> call, Response<List<BookCopy>> response) {

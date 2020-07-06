@@ -88,7 +88,7 @@ public class NotesActivity extends AppCompatActivity {
 
 
     private void getCarrers(){
-        Call<List<CarrerItems>> call = retrofitApi.getCarrers(Singleton_login.getInstance().usuario_logeado.getCarnet());//200613637  200719847
+        Call<List<CarrerItems>> call = retrofitApi.getCarrers(Singleton_login.getInstance().usuario_logeado.getCarnet(), Singlenton_URL.getAppid(), Singlenton_URL.getPass());//200613637  200719847
         call.enqueue(new Callback<List<CarrerItems>>() {
             @Override
             public void onResponse(Call<List<CarrerItems>> call, Response<List<CarrerItems>> response) {
@@ -138,7 +138,7 @@ public class NotesActivity extends AppCompatActivity {
 
 
     public void displayNotes(int id){
-        Call<List<ItemNote>> call = retrofitApi.getNotes(id);//200613637  200719847
+        Call<List<ItemNote>> call = retrofitApi.getNotes(id, Singlenton_URL.getAppid(), Singlenton_URL.getPass());//200613637  200719847
         call.enqueue(new Callback<List<ItemNote>>() {
             @Override
             public void onResponse(Call<List<ItemNote>> call, Response<List<ItemNote>> response) {

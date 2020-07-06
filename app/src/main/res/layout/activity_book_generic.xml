@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Registro 1 de 10"
+        android:text="Registro 1"
 
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,31 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:clickable="true"
-        android:background="@color/colorPrimary"
-        android:textColor="#ffffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_media_next" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="240dp"
-        android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_media_previous" />
 
     <GridView
         android:id="@+id/gridview"
@@ -100,10 +75,10 @@
         android:id="@+id/imageView8"
         android:layout_width="151dp"
         android:layout_height="153dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="35dp"
-        app:layout_constraintStart_toEndOf="@+id/floatingActionButton5"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="98dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sinportada" />
 
     <ImageView

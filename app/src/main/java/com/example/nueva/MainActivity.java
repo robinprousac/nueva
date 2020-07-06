@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openAuth(View view){
-        Intent intent = new Intent(this, AuthActivity.class);
+        Intent intent = new Intent(this, AutoridadActivity.class);
         startActivity(intent);
     }
 

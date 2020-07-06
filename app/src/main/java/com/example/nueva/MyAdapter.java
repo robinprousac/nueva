@@ -82,7 +82,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyviewHolder> {
                 }
             });
         }else{
-            Picasso.get().load(data.get(position).getUrl()).into(holder.imageView);
+           // Picasso.get().load(data.get(position).getUrl()).into(holder.imageView);
+           // Picasso.get().load(data.get(position).getUrl()).resize(1920, 1080)  .centerCrop() .into(holder.imageView);
+            Picasso.get().load(data.get(position).getUrl()).fit().into(holder.imageView);
         }
 
 

@@ -9,12 +9,12 @@ public class Singleton_idLibro {
     private static Singleton_idLibro single_instance = null;
 
     // variable of type String
-    public int usuario_logeado;
+    public int id_book;
 
     // private constructor restricted to this class itself
     private Singleton_idLibro()
     {
-        usuario_logeado = 0;
+        id_book = 0;
     }
 
     // static method to create instance of Singleton class

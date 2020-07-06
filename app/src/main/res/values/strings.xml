@@ -33,6 +33,20 @@
         <item>TITULO</item>
         <item>AUTOR</item>
     </string-array>
+    
+    <string-array name="programs">
+        <item>uno</item>
+        <item>dos</item>
+        <item>tres</item>
+        <item>cuatro</item>
+    </string-array>
+
+    <string-array name="programs_desc">
+        <item>unodesc</item>
+        <item>dosdesc</item>
+        <item>tresdesc</item>
+        <item>cuatrodesc</item>
+    </string-array>
 
 
     <string name="action_settings">Settings</string>

@@ -186,7 +186,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void validate(String carnet, String password){
-        Call<List<user_login>> call = retrofitApi.getLogin(carnet, password);
+        Call<List<user_login>> call = retrofitApi.getLogin(carnet, password, Singlenton_URL.getAppid(), Singlenton_URL.getPass());
         call.enqueue(new Callback<List<user_login>>() {
             @Override
             public void onResponse(Call<List<user_login>> call, Response<List<user_login>> response) {
