@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nueva.Interface.RetrofitApi;
@@ -56,7 +57,7 @@ public class ResultsActivity extends AppCompatActivity {
 
 
         gridView = (GridView)findViewById(R.id.gridview);
-        Toast.makeText(ResultsActivity.this,message,Toast.LENGTH_LONG).show();
+        //Toast.makeText(ResultsActivity.this,message,Toast.LENGTH_LONG).show();
 
         setLibros(message);
 
@@ -107,6 +108,10 @@ public class ResultsActivity extends AppCompatActivity {
                 //  json_text.setText(contenido);
                 Toast.makeText(ResultsActivity.this,contenido,Toast.LENGTH_LONG).show();
 */
+
+
+                TextView Resultados = (TextView) findViewById(R.id.textView5);
+                Resultados.setText("Resultados de busqueda: "+libros.size());
 
                 BooksAdapter booksAdapter = new BooksAdapter(ResultsActivity.this, libros);
                 gridView.setAdapter(booksAdapter);

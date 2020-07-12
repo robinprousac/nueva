@@ -103,6 +103,8 @@ public class Book_genericActivity extends AppCompatActivity {
                     }
 
                 }
+                values.add(tituloAnterior);
+                values.add(valor);
 
                 GridView myGrid=(GridView)findViewById(R.id.grid_descripcionlibro);
                 GridViewAdapter_DescripcionLibro adapt = new GridViewAdapter_DescripcionLibro(values,Book_genericActivity.this);
